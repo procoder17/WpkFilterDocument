@@ -1,0 +1,405 @@
+
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Documentation &#8211; NT Kernel Resources</title>
+	<atom:link href="https://www.ntkernel.com/docs/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.ntkernel.com</link>
+	<description>Kernel Network Technology Home</description>
+	<lastBuildDate>Sun, 03 Nov 2019 15:56:45 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.7.2</generator>
+
+<image>
+	<url>https://www.ntkernel.com/wp-content/uploads/2016/04/cropped-draft2-32x32.png</url>
+	<title>Documentation &#8211; NT Kernel Resources</title>
+	<link>https://www.ntkernel.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>SendPacketsToAdaptersUnsorted</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/sendpacketstoadaptersunsorted/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 15:56:45 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11097</guid>
+
+					<description><![CDATA[BOOL __stdcall SendPacketsToAdaptersUnsorted( HANDLE hOpen, PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess ); Forwards the bulk of network packets to corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field. Return Value: TRUE if call was successful, FALSE otherwise Parameters: hOpen Specifies driver object open handle. Packets Pointer to… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/sendpacketstoadaptersunsorted/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL __stdcall <strong>SendPacketsToAdaptersUnsorted</strong>( HANDLE hOpen, PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess );</code></p>
+<p>Forwards the bulk of network packets to corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>hOpen</em><br />
+Specifies driver object open handle.</p>
+<p><em>Packets</em><br />
+Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers.</p>
+<p><em>dwPacketsNum</em><br />
+Number of packets in the array above.</p>
+<p><em>pdwPacketsSuccess</em><br />
+Returns number of packets successfully sent to the driver.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong><br />
+This member is a C-wrapper for <a href="/docs/windows-packet-filter-documentation/c-api/sendpacketstoadaptersunsorted/">CNdisApi::SendPacketsToAdaptersUnsorted</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>SendPacketsToMstcpUnsorted</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/sendpacketstomstcpunsorted/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 15:54:42 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11098</guid>
+
+					<description><![CDATA[BOOL __stdcall SendPacketsToMstcpUnsorted( HANDLE hOpen, PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess ); Forwards the bulk of network packets up to MSTCP as these packets were received from the corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field. Return Value: TRUE if call was successful, FALSE otherwise Parameters:… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/sendpacketstomstcpunsorted/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL __stdcall <strong>SendPacketsToMstcpUnsorted</strong>( HANDLE hOpen, PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess );</code></p>
+<p>Forwards the bulk of network packets up to MSTCP as these packets were received from the corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>hOpen</em><br />
+Specifies driver object open handle.</p>
+<p><em>Packets</em><br />
+Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers.</p>
+<p><em>dwPacketsNum</em><br />
+Number of packets in the array above.</p>
+<p><em>pdwPacketsSuccess</em><br />
+Returns number of packets successfully sent to the driver.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong><br />
+This member is a C-wrapper for <a href="/docs/windows-packet-filter-documentation/c-api/sendpacketstomstcpunsorted/">CNdisApi::SendPacketsToMstcpUnsorted</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>SendPacketsToMstcpUnsorted</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/sendpacketstomstcpunsorted/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 15:52:01 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11102</guid>
+
+					<description><![CDATA[BOOL CNdisApi::SendPacketsToMstcpUnsorted ( PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess ); Forwards the bulk of network packets up to MSTCP as these packets were received from the corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field. Return Value: TRUE if call was successful, FALSE otherwise Parameters: Packets Pointer… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/sendpacketstomstcpunsorted/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL <strong>CNdisApi::SendPacketsToMstcpUnsorted</strong> ( PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess );</code></p>
+<p>Forwards the bulk of network packets up to MSTCP as these packets were received from the corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>Packets</em><br />
+Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers.</p>
+<p><em>dwPacketsNum</em><br />
+Number of packets in the array above.</p>
+<p><em>pdwPacketsSuccess</em><br />
+Returns number of packets successfully sent to the driver.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong></p>
+<p>This member calls driver with IOCTL_NDISRD_SEND_PACKET_TO_MSTCP_UNSORTEDcontrol code (see details below).</p>
+<p><strong>IOCTL_NDISRD_SEND_PACKET_TO_MSTCP_UNSORTED</strong></p>
+<table width="60%" border="0">
+<tbody>
+<tr>
+<td width="29%">Input Buffer</td>
+<td width="71%">UNSORTED_READ_SEND_REQUEST</td>
+</tr>
+<tr>
+<td>Input Buffer Size</td>
+<td>sizeof (UNSORTED_READ_SEND_REQUEST)</td>
+</tr>
+<tr>
+<td>Output Buffer</td>
+<td>UNSORTED_READ_SEND_REQUEST</td>
+</tr>
+<tr>
+<td>Output Buffer Size</td>
+<td>sizeof (UNSORTED_READ_SEND_REQUEST)</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>SendPacketsToAdaptersUnsorted</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/sendpacketstoadaptersunsorted/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 15:46:52 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11101</guid>
+
+					<description><![CDATA[BOOL CNdisApi::SendPacketsToAdaptersUnsorted ( PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess ); Forwards the bulk of network packets to corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field. Return Value: TRUE if call was successful, FALSE otherwise Parameters: Packets Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers. dwPacketsNum… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/sendpacketstoadaptersunsorted/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL <strong>CNdisApi::SendPacketsToAdaptersUnsorted</strong> ( PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess );</code></p>
+<p>Forwards the bulk of network packets to corresponding network interfaces. Adapter handle (and thus the target network adapter) for each packet should be specified by INTERMEDIATE_BUFFER::m_hAdapter field.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>Packets</em><br />
+Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers.</p>
+<p><em>dwPacketsNum</em><br />
+Number of packets in the array above.</p>
+<p><em>pdwPacketsSuccess</em><br />
+Returns number of packets successfully sent to the driver.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong></p>
+<p>This member calls driver with IOCTL_NDISRD_SEND_PACKET_TO_ADAPTER_UNSORTED control code (see details below).</p>
+<p><strong>IOCTL_NDISRD_SEND_PACKET_TO_ADAPTER_UNSORTED</strong></p>
+<table width="60%" border="0">
+<tbody>
+<tr>
+<td width="29%">Input Buffer</td>
+<td width="71%">UNSORTED_READ_SEND_REQUEST</td>
+</tr>
+<tr>
+<td>Input Buffer Size</td>
+<td>sizeof (UNSORTED_READ_SEND_REQUEST)</td>
+</tr>
+<tr>
+<td>Output Buffer</td>
+<td>UNSORTED_READ_SEND_REQUEST</td>
+</tr>
+<tr>
+<td>Output Buffer Size</td>
+<td>sizeof (UNSORTED_READ_SEND_REQUEST)</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ReadPacketsUnsorted</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/readpacketsunsorted/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 15:35:02 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11096</guid>
+
+					<description><![CDATA[BOOL __stdcall ReadPacketsUnsorted( HANDLE hOpen, PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess ); Reads any available packets from the driver packets queue. Adapter handle for each packet is available in INTERMEDIATE_BUFFER::m_hAdapter field. Return Value: TRUE if call was successful, FALSE otherwise Parameters: hOpen Specifies driver object open handle. Packets Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers. dwPacketsNum… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/readpacketsunsorted/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL __stdcall <strong>ReadPacketsUnsorted</strong>( HANDLE hOpen, PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess );</code></p>
+<p>Reads any available packets from the driver packets queue. Adapter handle for each packet is available in INTERMEDIATE_BUFFER::m_hAdapter field.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>hOpen</em><br />
+Specifies driver object open handle.</p>
+<p><em>Packets</em><br />
+Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers.</p>
+<p><em>dwPacketsNum</em><br />
+Number of packets in the array above.</p>
+<p><em>pdwPacketsSuccess</em><br />
+Returns number of packets successfully read from the driver.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong><br />
+This member is a C-wrapper for <a href="/docs/windows-packet-filter-documentation/c-api/readpacketsunsorted/">CNdisApi::ReadPacketsUnsorted</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ReadPacketsUnsorted</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/readpacketsunsorted/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 15:29:50 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11100</guid>
+
+					<description><![CDATA[BOOL CNdisApi::ReadPacketsUnsorted ( PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess ); Reads any available packets from the driver packets queue. Adapter handle for each packet is available in INTERMEDIATE_BUFFER::m_hAdapter field. Return Value: TRUE if call was successful, FALSE otherwise Parameters: Packets Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers. dwPacketsNum Number of packets in the array above. pdwPacketsSuccess… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/readpacketsunsorted/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL <strong>CNdisApi::ReadPacketsUnsorted</strong> ( PINTERMEDIATE_BUFFER* Packets, DWORD dwPacketsNum, PDWORD pdwPacketsSuccess );</code></p>
+<p>Reads any available packets from the driver packets queue. Adapter handle for each packet is available in INTERMEDIATE_BUFFER::m_hAdapter field.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>Packets</em><br />
+Pointer to the user allocated array of INTERMEDIATE_BUFFER pointers.</p>
+<p><em>dwPacketsNum</em><br />
+Number of packets in the array above.</p>
+<p><em>pdwPacketsSuccess</em><br />
+Returns number of packets successfully read from the driver.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong></p>
+<p>This member calls driver with IOCTL_NDISRD_READ_PACKETS_UNSORTED control code (see details below).</p>
+<p><strong>IOCTL_NDISRD_READ_PACKETS_UNSORTED</strong></p>
+<table width="60%" border="0">
+<tbody>
+<tr>
+<td width="29%">Input Buffer</td>
+<td width="71%">UNSORTED_READ_SEND_REQUEST</td>
+</tr>
+<tr>
+<td>Input Buffer Size</td>
+<td>sizeof (UNSORTED_READ_SEND_REQUEST)</td>
+</tr>
+<tr>
+<td>Output Buffer</td>
+<td>UNSORTED_READ_SEND_REQUEST</td>
+</tr>
+<tr>
+<td>Output Buffer Size</td>
+<td>sizeof (UNSORTED_READ_SEND_REQUEST)</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>InitializeFastIo</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/initializefastio/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 13:37:08 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11095</guid>
+
+					<description><![CDATA[BOOL __stdcall InitializeFastIo( HANDLE hOpen, PFAST_IO_SECTION pFastIo, DWORD dwSize ); Initializes Fast I/O to fetch packets from the driver through the shared memory section. Once initialized driver writes intercepted packets into this section until memory space is available (and application read operation not in progress). Otherwise packets are queued into the internal packets queue and can be retrieved… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/ndisapi-c-2/initializefastio/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL __stdcall <strong>InitializeFastIo</strong>( HANDLE hOpen, PFAST_IO_SECTION pFastIo, DWORD dwSize );</code></p>
+<p>Initializes Fast I/O to fetch packets from the driver through the shared memory section. Once initialized driver writes intercepted packets into this section until memory space is available (and application read operation not in progress). Otherwise packets are queued into the internal packets queue and can be retrieved from the driver using ReadPacketsUnsorted.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>hOpen</em><br />
+Specifies driver object open handle.</p>
+<p><em>pFastIo</em><br />
+Memory buffer allocated for the Fast I/O.</p>
+<p><em>dwSize</em><br />
+Size of the memory buffer above.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Remarks:</strong><br />
+This member is a C-wrapper for <a href="/docs/windows-packet-filter-documentation/c-api/initializefastio/">CNdisApi::InitializeFastIo</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>InitializeFastIo</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/initializefastio/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 13:29:59 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11099</guid>
+
+					<description><![CDATA[BOOL CNdisApi::InitializeFastIo ( PFAST_IO_SECTION pFastIo, DWORD dwSize ); Initializes Fast I/O to fetch packets from the driver through the shared memory section. Once initialized driver writes intercepted packets into this section until memory space is available (and application read operation not in progress). Otherwise packets are queued into the internal packets queue and can be retrieved from the… <span class="read-more"><a href="https://www.ntkernel.com/docs/windows-packet-filter-documentation/c-api/initializefastio/">Read More &#187;</a></span>]]></description>
+										<content:encoded><![CDATA[<p><code>BOOL <strong>CNdisApi::InitializeFastIo</strong> ( PFAST_IO_SECTION pFastIo, DWORD dwSize );</code></p>
+<p>Initializes Fast I/O to fetch packets from the driver through the shared memory section. Once initialized driver writes intercepted packets into this section until memory space is available (and application read operation not in progress). Otherwise packets are queued into the internal packets queue and can be retrieved from the driver using ReadPacketsUnsorted.</p>
+<p><strong>Return Value:</strong><br />
+TRUE if call was successful, FALSE otherwise</p>
+<p><strong>Parameters:</strong><br />
+<em>pFastIo</em><br />
+Memory buffer allocated for the Fast I/O.</p>
+<p><em>dwSize</em><br />
+Size of the memory buffer above.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+<p><strong>Example:</strong></p>
+<pre>using fast_io_storage_type_t = std::aligned_storage_t&lt;fast_io_size, 0x1000&gt;;
+const auto fast_io_ptr = std::make_unique&lt;fast_io_storage_type_t&gt;();
+const auto fast_io_section = reinterpret_cast&lt;PFAST_IO_SECTION&gt;(fast_io_ptr.get());
+		
+if (InitializeFastIo(fast_io_section, fast_io_size))
+{
+    std::cout &lt;&lt; std::endl &lt;&lt; "Successfully initialized fast I/O functionality" &lt;&lt; std::endl;
+}
+else
+{
+    std::cout &lt;&lt; std::endl &lt;&lt; "Failed tp initialize fast I/O functionality" &lt;&lt; std::endl;
+}
+</pre>
+<p>This member calls driver with IOCTL_NDISRD_INITIALIZE_FAST_IO control code (see details below).</p>
+<p><strong>IOCTL_NDISRD_INITIALIZE_FAST_IO</strong></p>
+<table width="60%" border="0">
+<tbody>
+<tr>
+<td width="29%">Input Buffer</td>
+<td width="71%"><a href="/docs/windows-packet-filter-documentation/structures/_initialize_fast_io_params/">INITIALIZE_FAST_IO_PARAMS</a></td>
+</tr>
+<tr>
+<td>Input Buffer Size</td>
+<td>sizeof (INITIALIZE_FAST_IO_PARAMS)</td>
+</tr>
+<tr>
+<td>Output Buffer</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Output Buffer Size</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>_INITIALIZE_FAST_IO_PARAMS</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/structures/_initialize_fast_io_params/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 13:23:20 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11108</guid>
+
+					<description><![CDATA[struct _INITIALIZE_FAST_IO_PARAMS { PFAST_IO_SECTION header_ptr; ULONG data_size; }; header_ptr Pointer to the shared memory section. data_size Size of the memory section above. Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.]]></description>
+										<content:encoded><![CDATA[<pre>struct _INITIALIZE_FAST_IO_PARAMS
+{
+    PFAST_IO_SECTION header_ptr;
+    ULONG data_size;
+};</pre>
+<p><em>header_ptr</em><br />
+Pointer to the shared memory section.</p>
+<p><em>data_size</em><br />
+Size of the memory section above.</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>_FAST_IO_SECTION</title>
+		<link>https://www.ntkernel.com/docs/windows-packet-filter-documentation/structures/_fast_io_section/</link>
+		
+		<dc:creator><![CDATA[]]></dc:creator>
+		<pubDate>Sun, 03 Nov 2019 12:46:34 +0000</pubDate>
+				<guid isPermaLink="false">https://www.ntkernel.com/?post_type=docs&#038;p=11066</guid>
+
+					<description><![CDATA[struct _FAST_IO_SECTION{ volatile FAST_IO_SECTION_HEADER fast_io_header; INTERMEDIATE_BUFFER fast_io_packets[ANY_SIZE]; }; Defines the structure of the shared memory section: fast_io_header Shared memory header containing information about number of the packets in the section and operations in progress. fast_io_packets Array of INTERMEDIATE_BUFFER structures Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.]]></description>
+										<content:encoded><![CDATA[<pre>struct _FAST_IO_SECTION{
+    volatile FAST_IO_SECTION_HEADER fast_io_header;
+    INTERMEDIATE_BUFFER fast_io_packets[ANY_SIZE]; 
+};</pre>
+<p>Defines the structure of the shared memory section:</p>
+<p><em>fast_io_header</em><br />
+Shared memory header containing information about number of the packets in the section and operations in progress.</p>
+<p><em>fast_io_packets</em><br />
+Array of INTERMEDIATE_BUFFER structures</p>
+<p><em>Available starting version 3.2.20. Fast I/O is supported for Windows Vista and later. WOW64 mode is not supported.</em></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

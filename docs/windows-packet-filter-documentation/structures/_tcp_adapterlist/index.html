@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<!-- Mirrored from www.ntkernel.com/docs/windows-packet-filter-documentation/structures/_tcp_adapterlist/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 May 2021 02:53:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="shortcut icon" href="https://www.ntkernel.com/wp-content/uploads/2016/03/favicon.ico" />
+<!--[if lt IE 9]>
+<script src="https://www.ntkernel.com/wp-content/themes/iconic-one-pro/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<style type="text/css">
+
+<!--Theme color-->
+	.themonic-nav .current-menu-item > a, .themonic-nav .current-menu-ancestor > a, .themonic-nav .current_page_item > a, .themonic-nav .current_page_ancestor > a {
+    background: #3694c7;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.themonic-nav .current-menu-item > a, .themonic-nav .current_page_item > a {
+    background: #3694c7;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.themonic-nav ul.nav-menu, .themonic-nav div.nav-menu ul {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-bottom: 5px solid #3694c7;
+    }		
+.themonic-nav li a:hover {
+	background: #3694c7;
+}
+.themonic-nav li:hover {
+	background: #3694c7;
+}
+.themonic-nav .current-menu-item a, .themonic-nav .current-menu-ancestor a, .themonic-nav .current_page_item a, .themonic-nav .current_page_ancestor a {
+    color: #ffffff;
+    font-weight: bold;
+}
+.themonic-nav li a:hover {
+	color: #ffffff;
+}
+.categories a {
+    background:#3694c7;
+}
+.read-more a {
+	color: #3694c7;
+}
+.featured-post {
+    color: #3694c7;
+}
+#emailsubmit {
+    background: #3694c7;
+}
+#searchsubmit {
+    background: #3694c7;
+}
+.sub-menu .current-menu-item > a, .sub-menu .current-menu-ancestor > a, .sub-menu .current_page_item > a, .sub-menu .current_page_ancestor > a {
+    background: #3694c7;
+    color: #fff;
+    font-weight: bold;
+}
+.comments-area article {
+    border-color: #E1E1E1 #E1E1E1 #3694c7;
+}
+@media screen and (max-width: 767px) {
+	.themonic-nav ul.nav-menu, .themonic-nav div.nav-menu > ul, .themonic-nav li {
+    border-bottom: none;
+    }
+}
+.top-header { padding: 20px; float: left; }
+</style>
+
+<title>_TCP_AdapterList &#8211; NT Kernel Resources</title>
+<meta name='robots' content='max-image-preview:large' />
+<script type="text/javascript" >            function apbct_attach_event_handler__backend(elem, event, callback){                if(typeof window.addEventListener === "function") elem.addEventListener(event, callback);                else                                              elem.attachEvent(event, callback);            }            apbct_attach_event_handler__backend(window, 'load', function(){                ctSetCookie('ct_checkjs', '58a9c30a15562b6836cfc1215e40b0f4b4c9b211002642a795345de560acc9eb' );            });</script><link rel='dns-prefetch' href='http://www.ntkernel.com/' />
+<link rel='dns-prefetch' href='http://www.googletagmanager.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="NT Kernel Resources &raquo; Feed" href="https://www.ntkernel.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NT Kernel Resources &raquo; Comments Feed" href="https://www.ntkernel.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.ntkernel.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../../../wp-includes/css/dist/block-library/style.min9f31.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='bbp-default-css'  href='../../../../wp-content/plugins/bbpress/templates/default/css/bbpress.mind7ad.css?ver=2.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='docspress-css'  href='../../../../wp-content/plugins/docspress/assets/css/style.min950a.css?ver=2.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='../../../../wp-content/plugins/wp-syntax/css/wp-syntax4963.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-fonts-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A400%2C700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='themonic-style-css'  href='../../../../wp-content/themes/iconic-one-pro/style9f31.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-css'  href='../../../../wp-content/themes/iconic-one-pro/custom9f31.css?ver=5.7.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='themonic-ie-css'  href='https://www.ntkernel.com/wp-content/themes/iconic-one-pro/css/ie.css?ver=20130305' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='fontawesome-css-css'  href='../../../../wp-content/themes/iconic-one-pro/fonts/font-awesome.min9f31.css?ver=5.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='ct_public-js-extra'>
+/* <![CDATA[ */
+var ctPublic = {"_ajax_nonce":"8dedfe0b92","_rest_nonce":"3d045682ce","_ajax_url":"https:\/\/www.ntkernel.com\/wp-admin\/admin-ajax.php","_rest_url":"https:\/\/www.ntkernel.com\/wp-json\/","data__set_cookies":"1","data__set_cookies__alt_sessions_type":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/plugins/cleantalk-spam-protect/js/apbct-public.min9dff.js?apbct_ver=5.157.2&amp;ver=5.157.2' id='ct_public-js'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/cleantalk-spam-protect/js/cleantalk-modal.min1ef7.js?ver=5.157.2' id='cleantalk-modal-js'></script>
+<script type='text/javascript' id='ct_nocache-js-extra'>
+/* <![CDATA[ */
+var ctNocache = {"ajaxurl":"https:\/\/www.ntkernel.com\/wp-admin\/admin-ajax.php","info_flag":"","set_cookies_flag":"1","blog_home":"https:\/\/www.ntkernel.com\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/plugins/cleantalk-spam-protect/js/cleantalk_nocache.min1ef7.js?ver=5.157.2' id='ct_nocache-js'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/iconic-one-pro/js/respond.min9f31.js?ver=5.7.2' id='respond-js'></script>
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-589814-1' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["www.ntkernel.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-589814-1", {"anonymize_ip":true});
+</script>
+<link rel="https://api.w.org/" href="https://www.ntkernel.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.ntkernel.com/wp-json/wp/v2/docs/9889" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ntkernel.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.ntkernel.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.2" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://www.ntkernel.com/?p=9889' />
+<link rel="alternate" type="application/json+oembed" href="https://www.ntkernel.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ntkernel.com%2Fdocs%2Fwindows-packet-filter-documentation%2Fstructures%2F_tcp_adapterlist%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.ntkernel.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ntkernel.com%2Fdocs%2Fwindows-packet-filter-documentation%2Fstructures%2F_tcp_adapterlist%2F&amp;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.32.0" /><link rel="icon" href="../../../../wp-content/uploads/2016/04/cropped-draft2-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../../../wp-content/uploads/2016/04/cropped-draft2-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../../../wp-content/uploads/2016/04/cropped-draft2-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.ntkernel.com/wp-content/uploads/2016/04/cropped-draft2-270x270.png" />
+</head>
+<body class="docs-template-default single single-docs postid-9889 custom-font-enabled single-author">
+							
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header" role="banner">
+				<div class="themonic-logo">
+			<a href="https://www.ntkernel.com/" title="NT Kernel Resources" rel="home"><img src="../../../../wp-content/uploads/2016/03/ntkernel_logo_50.png" alt="NT Kernel Resources"></a>
+					</div>
+					
+		<nav id="site-navigation" class="themonic-nav" role="navigation">
+			<a class="assistive-text" href="#main" title="Skip to content">Skip to content</a>
+			<ul id="menu-top" class="nav-menu"><li id="menu-item-8815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8815"><a href="https://www.ntkernel.com/">Home</a></li>
+<li id="menu-item-8816" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8816"><a href="#">Windows Packet Filter</a>
+<ul class="sub-menu">
+	<li id="menu-item-8810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8810"><a href="https://www.ntkernel.com/windows-packet-filter/">WinpkFilter Library</a></li>
+	<li id="menu-item-10572" class="menu-item menu-item-type-post_type menu-item-object-docs current-docs-ancestor menu-item-10572"><a href="../../index.html">WinpkFilter API Reference</a></li>
+	<li id="menu-item-8808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8808"><a href="https://www.ntkernel.com/winpkfilter-samples/">Basic Samples</a></li>
+	<li id="menu-item-8817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8817"><a href="#">Advanced Samples</a>
+	<ul class="sub-menu">
+		<li id="menu-item-8814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8814"><a href="https://www.ntkernel.com/windows-packet-filter/internet-gateway/">Internet Gateway</a></li>
+		<li id="menu-item-8812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8812"><a href="https://www.ntkernel.com/windows-packet-filter/wan-emulator/">WAN Emulator</a></li>
+		<li id="menu-item-8811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8811"><a href="https://www.ntkernel.com/windows-packet-filter/ethernet-bridge/">Ethernet Bridge</a></li>
+	</ul>
+</li>
+	<li id="menu-item-9227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9227"><a href="https://www.ntkernel.com/winpkfilter-release-history/">Release History</a></li>
+</ul>
+</li>
+<li id="menu-item-9311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9311"><a href="#">ToolBox</a>
+<ul class="sub-menu">
+	<li id="menu-item-8809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8809"><a href="https://www.ntkernel.com/virtnet/">VirtNet</a></li>
+	<li id="menu-item-9304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9304"><a href="https://www.ntkernel.com/local-network-monitor/">Local Network Monitor</a></li>
+	<li id="menu-item-9309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9309"><a href="https://www.ntkernel.com/device-filter/">Device Filter</a></li>
+</ul>
+</li>
+<li id="menu-item-8828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8828"><a href="https://www.ntkernel.com/forums/forum/nt-kernel-resources-forums/">Discussions</a>
+<ul class="sub-menu">
+	<li id="menu-item-8832" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8832"><a href="https://www.ntkernel.com/forums/forum/nt-kernel-resources-forums/windows-internals/">General Discussion</a></li>
+	<li id="menu-item-8833" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8833"><a href="https://www.ntkernel.com/forums/forum/nt-kernel-resources-forums/support-forum/">Support Portal</a></li>
+</ul>
+</li>
+<li id="menu-item-9315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9315"><a href="https://www.ntkernel.com/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-9355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9355"><a href="https://www.ntkernel.com/refund-policy/">Refund Policy</a></li>
+</ul>
+</li>
+</ul>		</nav><!-- #site-navigation -->
+		<div class="clear"></div>
+	</header><!-- #masthead -->
+		<div id="main" class="wrapper">	<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+    <article id="post-9889" class="docspress-single docspress-single-ajax post-9889 docs type-docs status-publish hentry">
+
+        
+<div class="docspress-single-sidebar">
+    <div class="docspress-single-sidebar-wrap">
+                    <form role="search" method="get" class="docspress-search-form" action="https://www.ntkernel.com/">
+                <input type="search" class="docspress-search-field" placeholder="Type to search" value="" name="s" autocomplete="off">
+                <input type="hidden" name="post_type" value="docs">
+                                    <input type="hidden" name="child_of" value="9724">
+                            </form>
+            <div class="docspress-search-form-result"></div>
+        
+                    <ul class="docspress-nav-list">
+                <li class="page_item page-item-9899"><a href="../../what-is-winpkfilter/index.html">What is WinpkFilter©?</a></li>
+<li class="page_item page-item-9908"><a href="../../installation/index.html">Installation</a></li>
+<li class="page_item page-item-9725 page_item_has_children current_page_ancestor current_page_parent"><a href="../index.html">Structures <sup>[30]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-9799"><a href="../adapter_event/index.html">_ADAPTER_EVENT</a></li>
+	<li class="page_item page-item-9777"><a href="../adapter_mode/index.html">_ADAPTER_MODE</a></li>
+	<li class="page_item page-item-9780"><a href="../data_link_layer_filter/index.html">_DATA_LINK_LAYER_FILTER</a></li>
+	<li class="page_item page-item-9805"><a href="../_eth_802_3_filter/index.html">_ETH_802_3_FILTER</a></li>
+	<li class="page_item page-item-9808"><a href="../_eth_m_request/index.html">_ETH_M_REQUEST</a></li>
+	<li class="page_item page-item-9811"><a href="../_eth_request/index.html">_ETH_REQUEST</a></li>
+	<li class="page_item page-item-9814"><a href="../_intermediate_buffer/index.html">_INTERMEDIATE_BUFFER</a></li>
+	<li class="page_item page-item-9817"><a href="../_ip_address_v4/index.html">_IP_ADDRESS_V4</a></li>
+	<li class="page_item page-item-9824"><a href="../_ip_address_v6/index.html">_IP_ADDRESS_V6</a></li>
+	<li class="page_item page-item-9827"><a href="../_ip_range_v4/index.html">_IP_RANGE_V4</a></li>
+	<li class="page_item page-item-9830"><a href="../_ip_range_v6/index.html">_IP_RANGE_V6</a></li>
+	<li class="page_item page-item-9833"><a href="../_ip_subnet_v4/index.html">_IP_SUBNET_V4</a></li>
+	<li class="page_item page-item-9836"><a href="../_ip_subnet_v6/index.html">_IP_SUBNET_V6</a></li>
+	<li class="page_item page-item-9843"><a href="../_ip_v4_filter/index.html">_IP_V4_FILTER</a></li>
+	<li class="page_item page-item-9849"><a href="../_ip_v6_filter/index.html">_IP_V6_FILTER</a></li>
+	<li class="page_item page-item-9854"><a href="../_ndisrd_eth_packet/index.html">_NDISRD_ETH_Packet</a></li>
+	<li class="page_item page-item-9859"><a href="../_network_layer_filter/index.html">_NETWORK_LAYER_FILTER</a></li>
+	<li class="page_item page-item-9863"><a href="../_packet_oid_data/index.html">_PACKET_OID_DATA</a></li>
+	<li class="page_item page-item-9866"><a href="../_port_range/index.html">_PORT_RANGE</a></li>
+	<li class="page_item page-item-9869"><a href="../_ras_link_info/index.html">_RAS_LINK_INFO</a></li>
+	<li class="page_item page-item-9874"><a href="../_ras_links/index.html">_RAS_LINKS</a></li>
+	<li class="page_item page-item-9877"><a href="../_static_filter/index.html">_STATIC_FILTER</a></li>
+	<li class="page_item page-item-9886"><a href="../_static_filter_table/index.html">_STATIC_FILTER_TABLE</a></li>
+	<li class="page_item page-item-9889 current_page_item"><a href="index.html" aria-current="page">_TCP_AdapterList</a></li>
+	<li class="page_item page-item-9893"><a href="../_tcpudp_filter/index.html">_TCPUDP_FILTER</a></li>
+	<li class="page_item page-item-9896"><a href="../_transport_layer_filter/index.html">_TRANSPORT_LAYER_FILTER</a></li>
+	<li class="page_item page-item-11057"><a href="../_fast_io_write_union/index.html">_FAST_IO_WRITE_UNION</a></li>
+	<li class="page_item page-item-11063"><a href="../_fast_io_section_header/index.html">_FAST_IO_SECTION_HEADER</a></li>
+	<li class="page_item page-item-11066"><a href="../_fast_io_section/index.html">_FAST_IO_SECTION</a></li>
+	<li class="page_item page-item-11108"><a href="../_initialize_fast_io_params/index.html">_INITIALIZE_FAST_IO_PARAMS</a></li>
+</ul>
+</li>
+<li class="page_item page-item-9966 page_item_has_children"><a href="../../ndisapi-c-2/index.html">C interface <sup>[39]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-9974"><a href="../../ndisapi-c-2/closefilterdriver/index.html">CloseFilterDriver</a></li>
+	<li class="page_item page-item-10066"><a href="../../ndisapi-c-2/convertwindows2000adaptername/index.html">ConvertWindows2000AdapterName</a></li>
+	<li class="page_item page-item-10078"><a href="../../ndisapi-c-2/convertwindows9xadaptername/index.html">ConvertWindows9xAdapterName</a></li>
+	<li class="page_item page-item-10085"><a href="../../ndisapi-c-2/convertwindowsntadaptername/index.html">ConvertWindowsNTAdapterName</a></li>
+	<li class="page_item page-item-10095"><a href="../../ndisapi-c-2/flushadapterpacketqueue/index.html">FlushAdapterPacketQueue</a></li>
+	<li class="page_item page-item-10107"><a href="../../ndisapi-c-2/getadaptermode/index.html">GetAdapterMode</a></li>
+	<li class="page_item page-item-10117"><a href="../../ndisapi-c-2/getadapterpacketqueuesize/index.html">GetAdapterPacketQueueSize</a></li>
+	<li class="page_item page-item-10132"><a href="../../ndisapi-c-2/getadaptersstartupmode/index.html">GetAdaptersStartupMode</a></li>
+	<li class="page_item page-item-9988"><a href="../../ndisapi-c-2/getversion/index.html">GetDriverVersion</a></li>
+	<li class="page_item page-item-10141"><a href="../../ndisapi-c-2/gethwpacketfilter/index.html">GetHwPacketFilter</a></li>
+	<li class="page_item page-item-10163"><a href="../../ndisapi-c-2/getmtudecrement/index.html">GetMTUDecrement</a></li>
+	<li class="page_item page-item-10182"><a href="../../ndisapi-c-2/getpacketfiltertable/index.html">GetPacketFilterTable</a></li>
+	<li class="page_item page-item-10027"><a href="../../ndisapi-c-2/getpacketfiltertableresetstats/index.html">GetPacketFilterTableResetStats</a></li>
+	<li class="page_item page-item-10186"><a href="../../ndisapi-c-2/getpacketfiltertablesize/index.html">GetPacketFilterTableSize</a></li>
+	<li class="page_item page-item-10200"><a href="../../ndisapi-c-2/getraslinks/index.html">GetRasLinks</a></li>
+	<li class="page_item page-item-10208"><a href="../../ndisapi-c-2/gettcpipboundadaptersinfo/index.html">GetTcpipBoundAdaptersInfo</a></li>
+	<li class="page_item page-item-10216"><a href="../../ndisapi-c-2/isdriverloaded/index.html">IsDriverLoaded</a></li>
+	<li class="page_item page-item-10222"><a href="../../ndisapi-c-2/ndisrdrequest/index.html">NdisrdRequest</a></li>
+	<li class="page_item page-item-9980"><a href="../../ndisapi-c-2/openfilterdriver/index.html">OpenFilterDriver</a></li>
+	<li class="page_item page-item-10231"><a href="../../ndisapi-c-2/readpacket/index.html">ReadPacket</a></li>
+	<li class="page_item page-item-10239"><a href="../../ndisapi-c-2/readpackets/index.html">ReadPackets</a></li>
+	<li class="page_item page-item-10311"><a href="../../ndisapi-c-2/resetpacketfiltertable/index.html">ResetPacketFilterTable</a></li>
+	<li class="page_item page-item-10360"><a href="../../ndisapi-c-2/sendpacketstoadapter/index.html">SendPacketsToAdapter</a></li>
+	<li class="page_item page-item-10368"><a href="../../ndisapi-c-2/sendpacketstomstcp/index.html">SendPacketsToMstcp</a></li>
+	<li class="page_item page-item-10376"><a href="../../ndisapi-c-2/sendpackettomstcp/index.html">SendPacketToMstcp</a></li>
+	<li class="page_item page-item-10421"><a href="../../ndisapi-c-2/sendpackettoadapter/index.html">SendPacketToAdapter</a></li>
+	<li class="page_item page-item-10432"><a href="../../ndisapi-c-2/setadaptermode/index.html">SetAdapterMode</a></li>
+	<li class="page_item page-item-10465"><a href="../../ndisapi-c-2/setadapterlistchangeevent/index.html">SetAdapterListChangeEvent</a></li>
+	<li class="page_item page-item-10470"><a href="../../ndisapi-c-2/setadaptersstartupmode/index.html">SetAdaptersStartupMode</a></li>
+	<li class="page_item page-item-10475"><a href="../../ndisapi-c-2/sethwpacketfilter/index.html">SetHwPacketFilter</a></li>
+	<li class="page_item page-item-10540"><a href="../../ndisapi-c-2/sethwpacketfilterevent/index.html">SetHwPacketFilterEvent</a></li>
+	<li class="page_item page-item-10480"><a href="../../ndisapi-c-2/setmtudecrement/index.html">SetMTUDecrement</a></li>
+	<li class="page_item page-item-10484"><a href="../../ndisapi-c-2/setpacketfiltertable/index.html">SetPacketFilterTable</a></li>
+	<li class="page_item page-item-10523"><a href="../../ndisapi-c-2/setpacketevent/index.html">SetPacketEvent</a></li>
+	<li class="page_item page-item-10529"><a href="../../ndisapi-c-2/setwanevent/index.html">SetWANEvent</a></li>
+	<li class="page_item page-item-11095"><a href="../../ndisapi-c-2/initializefastio/index.html">InitializeFastIo</a></li>
+	<li class="page_item page-item-11096"><a href="../../ndisapi-c-2/readpacketsunsorted/index.html">ReadPacketsUnsorted</a></li>
+	<li class="page_item page-item-11097"><a href="../../ndisapi-c-2/sendpacketstoadaptersunsorted/index.html">SendPacketsToAdaptersUnsorted</a></li>
+	<li class="page_item page-item-11098"><a href="../../ndisapi-c-2/sendpacketstomstcpunsorted/index.html">SendPacketsToMstcpUnsorted</a></li>
+</ul>
+</li>
+<li class="page_item page-item-9992 page_item_has_children"><a href="../../c-api/index.html">C++ interface <sup>[38]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-10046"><a href="../../c-api/cndisapi/index.html">CNdisApi</a></li>
+	<li class="page_item page-item-10061"><a href="../../c-api/convertwindows2000adaptername/index.html">ConvertWindows2000AdapterName</a></li>
+	<li class="page_item page-item-10073"><a href="../../c-api/convertwindows9xadaptername/index.html">ConvertWindows9xAdapterName</a></li>
+	<li class="page_item page-item-10082"><a href="../../c-api/convertwindowsntadaptername/index.html">ConvertWindowsNTAdapterName</a></li>
+	<li class="page_item page-item-10089"><a href="../../c-api/flushadapterpacketqueue/index.html">FlushAdapterPacketQueue</a></li>
+	<li class="page_item page-item-10101"><a href="../../c-api/getadaptermode/index.html">GetAdapterMode</a></li>
+	<li class="page_item page-item-10112"><a href="../../c-api/getadapterpacketqueuesize/index.html">GetAdapterPacketQueueSize</a></li>
+	<li class="page_item page-item-10128"><a href="../../c-api/getadaptersstartupmode/index.html">GetAdaptersStartupMode</a></li>
+	<li class="page_item page-item-10136"><a href="../../c-api/gethwpacketfilter/index.html">GetHwPacketFilter</a></li>
+	<li class="page_item page-item-10148"><a href="../../c-api/getmtudecrement/index.html">GetMTUDecrement</a></li>
+	<li class="page_item page-item-10178"><a href="../../c-api/getpacketfiltertable/index.html">GetPacketFilterTable</a></li>
+	<li class="page_item page-item-10005"><a href="../../c-api/cndisapigetpacketfiltertableresetstats/index.html">GetPacketFilterTableResetStats</a></li>
+	<li class="page_item page-item-10188"><a href="../../c-api/getpacketfiltertablesize/index.html">GetPacketFilterTableSize</a></li>
+	<li class="page_item page-item-10197"><a href="../../c-api/getraslinks/index.html">GetRasLinks</a></li>
+	<li class="page_item page-item-10206"><a href="../../c-api/gettcpipboundadaptersinfo/index.html">GetTcpipBoundAdaptersInfo</a></li>
+	<li class="page_item page-item-10009"><a href="../../c-api/getversion/index.html">GetVersion</a></li>
+	<li class="page_item page-item-10215"><a href="../../c-api/isdriverloaded/index.html">IsDriverLoaded</a></li>
+	<li class="page_item page-item-10221"><a href="../../c-api/ndisrdrequest/index.html">NdisrdRequest</a></li>
+	<li class="page_item page-item-10230"><a href="../../c-api/readpacket/index.html">ReadPacket</a></li>
+	<li class="page_item page-item-10238"><a href="../../c-api/readpackets/index.html">ReadPackets</a></li>
+	<li class="page_item page-item-10306"><a href="../../c-api/resetpacketfiltertable/index.html">ResetPacketFilterTable</a></li>
+	<li class="page_item page-item-10356"><a href="../../c-api/sendpacketstoadapter/index.html">SendPacketsToAdapter</a></li>
+	<li class="page_item page-item-10362"><a href="../../c-api/sendpacketstomstcp/index.html">SendPacketsToMstcp</a></li>
+	<li class="page_item page-item-10372"><a href="../../c-api/sendpackettomstcp/index.html">SendPacketToMstcp</a></li>
+	<li class="page_item page-item-10378"><a href="../../c-api/sendpackettoadapter/index.html">SendPacketToAdapter</a></li>
+	<li class="page_item page-item-10425"><a href="../../c-api/setadaptermode/index.html">SetAdapterMode</a></li>
+	<li class="page_item page-item-10434"><a href="../../c-api/setadapterlistchangeevent/index.html">SetAdapterListChangeEvent</a></li>
+	<li class="page_item page-item-10468"><a href="../../c-api/setadaptersstartupmode/index.html">SetAdaptersStartupMode</a></li>
+	<li class="page_item page-item-10473"><a href="../../c-api/sethwpacketfilter/index.html">SetHwPacketFilter</a></li>
+	<li class="page_item page-item-10537"><a href="../../c-api/sethwpacketfilterevent/index.html">SetHwPacketFilterEvent</a></li>
+	<li class="page_item page-item-10478"><a href="../../c-api/setmtudecrement/index.html">SetMTUDecrement</a></li>
+	<li class="page_item page-item-10482"><a href="../../c-api/setpacketfiltertable/index.html">SetPacketFilterTable</a></li>
+	<li class="page_item page-item-10490"><a href="../../c-api/setpacketevent/index.html">SetPacketEvent</a></li>
+	<li class="page_item page-item-10526"><a href="../../c-api/setwanevent/index.html">SetWANEvent</a></li>
+	<li class="page_item page-item-11099"><a href="../../c-api/initializefastio/index.html">InitializeFastIo</a></li>
+	<li class="page_item page-item-11100"><a href="../../c-api/readpacketsunsorted/index.html">ReadPacketsUnsorted</a></li>
+	<li class="page_item page-item-11101"><a href="../../c-api/sendpacketstoadaptersunsorted/index.html">SendPacketsToAdaptersUnsorted</a></li>
+	<li class="page_item page-item-11102"><a href="../../c-api/sendpacketstomstcpunsorted/index.html">SendPacketsToMstcpUnsorted</a></li>
+</ul>
+</li>
+<li class="page_item page-item-9967 page_item_has_children"><a href="../../ndisapi-net/index.html">.NET interface <sup>[1]</sup></a>
+<ul class='children'>
+	<li class="page_item page-item-10989"><a href="../../ndisapi-net/networkadapter-class/index.html">NetworkAdapter Class</a></li>
+</ul>
+</li>
+            </ul>
+            </div>
+</div>
+
+        <div class="docspress-single-content">
+            
+<ul class="docspress-single-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="https://www.ntkernel.com/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="../../../index.html"><span itemprop="name">Documentation</span></a>
+            <meta itemprop="position" content="2" />
+        </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="../../index.html"><span itemprop="name">WinpkFilter API Reference</span></a>
+            <meta itemprop="position" content="3" />
+        </li>
+                        <li class="delimiter"> / </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="../index.html"><span itemprop="name">Structures</span></a>
+            <meta itemprop="position" content="4" />
+        </li>
+    </ul>
+<header class="entry-header">
+    <h1 class="entry-title" itemprop="headline">_TCP_AdapterList</h1></header><!-- .entry-header -->
+
+            <div class="entry-content">
+                <pre>struct _TCP_AdapterList
+{
+   unsigned long	m_nAdapterCount;
+   unsigned char	m_szAdapterNameList[ ADAPTER_LIST_SIZE ][ ADAPTER_NAME_SIZE ];
+   HANDLE		m_nAdapterHandle [ ADAPTER_LIST_SIZE ];
+   unsigned int		m_nAdapterMediumList[ ADAPTER_LIST_SIZE ];
+   unsigned char	m_czCurrentAddress[ ADAPTER_LIST_SIZE ][ ETHER_ADDR_LENGTH ];
+   unsigned short	m_usMTU [ ADAPTER_LIST_SIZE ];
+};</pre>
+<p><em>m_nAdapterCount</em><br />
+Number of MSTCP associated interfaces.</p>
+<p><em>m_szAdapterNameList</em><br />
+An array of internal adapter names.</p>
+<p><em>m_nAdapterHandle</em><br />
+An array of adapter handles, this are key handles for any adapter relative operation.</p>
+<p><em>m_nAdapterMediumList</em><br />
+An array of adapters mediums.</p>
+<p><em>m_czCurrentAddress</em><br />
+An array of adapters current (configured) Ethernet addresses.</p>
+<p><em>m_usMTU</em><br />
+An array of adapters MTUs.</p>
+            </div><!-- .entry-content -->
+
+            
+<footer class="entry-footer">
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="ntkernel.com" />
+        <meta itemprop="url" content="https://www.ntkernel.com/author/vadim/" />
+    </div>
+
+    <meta itemprop="datePublished" content="2018-03-26T10:39:05-05:00"/>
+    <time itemprop="dateModified" datetime="2019-11-03T12:42:51-06:00">
+        Last modified November 3, 2019    </time>
+</footer>
+    <nav class="docspress-single-adjacent-nav">
+        <h3 class="docspress-sr-only">Doc navigation</h3>
+                    <span class="nav-previous">
+                <a href="../_static_filter_table/index.html" class="docspress-btn docspress-btn-md"><span class="icon">&lt;</span> _STATIC_FILTER_TABLE</a>
+            </span>
+        
+                    <span class="nav-next">
+                <a href="../_tcpudp_filter/index.html" class="docspress-btn docspress-btn-md">_TCPUDP_FILTER <span class="icon">&gt;</span></a>
+            </span>
+            </nav>
+            </div><!-- .docspress-single-content -->
+    </article><!-- #post-## -->
+        </main>
+</div>
+	</div><!-- #main .wrapper -->
+			
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+		<div class="footercopy">Copyright NT Kernel Resources 2000-2021</div>
+		<div class="footercredit"></div>
+		<div class="clear"></div>
+		</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+		<div class="site-wordpress">
+				
+				</div><!-- .site-info -->
+				<div class="clear"></div>
+					</div><!-- #page -->
+<script type="text/javascript" >
+				if( document.querySelectorAll('[name^=ct_checkjs]').length > 0 ) {
+					window.addEventListener('DOMContentLoaded', function () {
+						apbct_public_sendREST(
+		                    'js_keys__get',
+		                    { callback: apbct_js_keys__set_input_value }
+		                )
+					});
+				}				
+			</script><script src="../../../../../cdn.paddle.com/paddle/paddle.js"></script>
+<script type="text/javascript">
+	Paddle.Setup({ vendor: 123824 });
+</script><script type='text/javascript' src='../../../../wp-content/plugins/docspress/assets/vendor/anchor-js/anchor.min3a05.js?ver=4.2.2' id='anchor-js-js'></script>
+<script type='text/javascript' id='docspress-js-extra'>
+/* <![CDATA[ */
+var docspress_vars = {"ajaxurl":"https:\/\/www.ntkernel.com\/wp-admin\/admin-ajax.php","nonce":"95d72f94f8"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/plugins/docspress/assets/js/script.min950a.js?ver=2.2.3' id='docspress-js'></script>
+<script type='text/javascript' id='docspress-js-after'>
+                (function ($) {
+                    $(document).on("docspress_ajax_loaded", function (event, new_page) {
+                        /*
+ * New page content loaded via ajax you can get in variable 'new_page'
+ * Example: console.log(new_page);
+ */
+                    });
+                }(jQuery));
+            
+</script>
+<script type='text/javascript' src='../../../../wp-content/plugins/wp-syntax/js/wp-syntax4963.js?ver=1.1' id='wp-syntax-js-js'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/iconic-one-pro/js/selectnav9f31.js?ver=5.7.2' id='themonic-mobile-navigation-js'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/wp-embed.min9f31.js?ver=5.7.2' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from www.ntkernel.com/docs/windows-packet-filter-documentation/structures/_tcp_adapterlist/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 May 2021 02:53:06 GMT -->
+</html>
